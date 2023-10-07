@@ -1,18 +1,4 @@
-# SemPraceA_dat_structure
-A) Motivační příklad:
 
-V rámci výroby nějakého produktu se jeho výroba skládá z jednotlivých procesů. Každý 
-proces může být realizován (i) robotem, nebo (ii) manuálně. Čas od času může dojít
-k reorganizaci výrobních ***manuálních*** procesů a to tak, že buď jsou (i) časově náročné 
-procesy dekomponovány, nebo (ii) dva krátké po sobě jdoucí procesy agregovány. 
-
-B) Použité datové struktury:
-
-V rámci modulu ***ABSTRDOUBLELIST*** implementujte abstraktní datovou strukturu (ADS)
-***obousměrně cyklicky zřetězený lineární seznam*** v dynamické paměti (stylizovaně 
-znázorněný v rámci obr. 1). Tato třída implementuje rozhraní IAbstrDoubleList, 
-které implementuje implicitní rozhraní Iterable. Rozhraní IAbstrDoubleList je 
-definováno následovně:
 
 ***void zrus()*** 
 > zrušení celého seznamu
@@ -47,7 +33,6 @@ definováno následovně:
 ***T zpristupniPredchudce()***
 >zpřístupnění předchůdce aktuálního prvku
 
-Pozn. Operace typu zpřístupni, přenastavují pozici aktuálního prvku
  
 ***T odeberAktualni()*** 
 > odebrání (vyjmutí) aktuálního prvku ze seznamu poté je aktuální prvek nastaven na první prvek
@@ -83,12 +68,6 @@ implementuje následující rozhraní: ***IAbstrLifo***
 ***T odeber()***
 > odebrání prvku ze zásobníku
 
-Abstraktní lineární seznam slouží pro uchovávání jednotlivých výrobních procesů. 
-Abstraktní datový typ zásobník pak aplikace využívá pro uchovávání procesů, které mají 
-být reorganizovány (dekomponovány, respektive agregovány).
-
-C) Pro ověření funkčnosti implementovaných ADS vytvořte modul ***VyrobniProces***. Tento 
-modul umožnuje správu výrobních procesů a implementuje následující rozhraní:
 
 ***int importDat(String soubor)*** 
 > provede import dat z datového souboru import.csv. Návratová hodnota přestavuje počet úspěšně načtených záznamů.
